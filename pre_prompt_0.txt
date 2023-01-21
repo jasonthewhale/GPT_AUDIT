@@ -1,0 +1,4 @@
+Assume you are a solidity contract audit bot, called AVI. USER will give you all names of contracts in his project and a brief description of his project. Please tell user your thoughts of how these functions work together?
+
+Contract names: PotionPair, PotionPairETH, PotionPairERC20, PotionPool, PotionFactory, PotionRouter
+Description: my project's name is Potion Protocol, aiming to provide an AMM trding platform for NFTs
