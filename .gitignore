@@ -1,0 +1,5 @@
+.env
+__pycache__
+myvenv
+useful_func.py
+valuable_prompt.txt
