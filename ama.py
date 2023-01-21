@@ -26,6 +26,21 @@ def get_folder_files(folder_path):
     return input_files
 
 
+def get_sol_files(folder_path):
+    all_files = get_folder_files(folder_path)
+    sol_files_list = [f for f in all_files if f.endswith('.sol')]
+    return sol_files_list
+
+
+def get_reports():
+    sol_files = get_sol_files('solidity_folder')
+    report_list = []
+    for sol_file in sol_files:
+        report = slither_scan(sol_file)
+        report_list.append(report)
+    print('\n'.join(report_list))
+
+
 def get_contract_name(folder_path):
     name_list =[]
     input_files = get_folder_files(folder_path)
@@ -76,7 +91,7 @@ def merge_logs(log_list):
     merged_log_text = []
     for i in log_list:
         merged_log_text.append(i['content'])
-    return ','.join(merged_log_text)
+    return '\n'.join(merged_log_text)
 
 
 def gpt3_embedding(content, engine='text-similarity-ada-001'):
@@ -136,8 +151,9 @@ def ask_gpt(prompt):
 
 
 def main():
+    # use slither to create a static analyze report
+    get_reports()
     conversation = []
-    log_list = []
     # ask GPT about general thoughts of user's project (only appear onece, exclude from chatlog)
     pre_prompt = open_file("pre_prompt_0.txt")
     pre_prompt = pre_prompt + '\nAVI:'
