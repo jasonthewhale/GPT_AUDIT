@@ -1,6 +1,6 @@
 # smart-contract-audit-bot-powered-by-ChatGPT
 
-* Background [Background?](#Background)
+* [Background](#Background)
 * Possible usage and shortage of current ChatGPT demo
 * Install
 * Usage
