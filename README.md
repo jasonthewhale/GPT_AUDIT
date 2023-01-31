@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Background](#Background)
-* [Possible-usage-and-shortage-of-current-ChatGPT-demo](#Possible-usagea-and-shortage-of-current-ChatGPT-demo)
+* [Possible usage and shortage of current ChatGPT demo](#Possible usage and shortage of current ChatGPT demo)
 * [Install](#Install)
 * [Usage](#Usage)
 * [Examples](#Examples)
