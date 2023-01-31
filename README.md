@@ -1,4 +1,4 @@
-# Solidity project audition bot powered by ChatGPT
+# Solidity contract audition bot powered by ChatGPT
 
 ## Table of Contents
 * [Background](#Background)
