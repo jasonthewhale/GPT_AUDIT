@@ -145,9 +145,12 @@ This bot simulates the process of auditing contracts, it finish these tasks by o
 ```
 $ python3 -i ama.py  
 ```
-  - first, it will merge all contract contents into a single file, called "merge.txt" and expext some feedback appeared in terminal:   
+  - first, it will merge all contract contents into a single file, called "merge.txt" :   
     ```
     $ finished merge contract
+    ```
+  - then it will create embedding data with contract contents, saving as "index.json":  
+    ```  
     $ contract embedding has created
     ```
   - second, it will run slither to scan all vulnerabilities, and print results in terminal:  
