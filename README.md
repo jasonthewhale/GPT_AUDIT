@@ -179,17 +179,14 @@ $ python3 -i ama.py
     AVI: Based on the contract names and project description, my understanding is that PotionPair is a contract used to pair NFTs with their corresponding     ERC20 and ETH tokens, PotionPool is a contract used to manage a liquidity pool of NFT and token pairs, PotionFactory is a contract used to mint and       burn NFTs, and PotionRouter is a contract used to route token transfers to and from the liquidity pool. The contracts should work together to enable       the user to trade NFTs on the AMM platform.
     USER: 
     ```
-  - also, bot will automatically store all chat log which can be used to get previous conversation, making more accurate answer.
-Write something here:
-User submit all contracts that need to test:
+    
+   - also, bot will automatically store all chat log which can be used to get previous conversation, making more accurate answer.
+    
+---
+### Contributing    
 
-slither scan:
-1. Use slither to finish static analyse ("slither .")
+---
 
-AI analyze:
-1. I managed to list all contracts' names
-2. Ask user to describe his projcet in one sentence with contract names
-3. Use this contract list and description as prompt to chaygpt
-4. Take all contract info as external source
-5. When user ask any question about contract, use ada-similarity engine to fetch relative info as prompt
-6. Chatgpt give response according prompt
+### License
+MIT © Junchen You
+
