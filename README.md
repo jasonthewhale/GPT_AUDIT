@@ -31,19 +31,19 @@ I believe most ppl don't understand what digital 3d and IMAX can do before *Avat
 AI is the same situation. ChatGPT is a huge usage that excited ppl worldwide, but I expect much more than that.
 
 To list some possible usage:
-1. Software for Office
+1. Software for Office  
 Notion and DeepL has already made use of AI to enhance user experience.
 Since Office is one of core products of Microsoft, AI will be included sooner or later.
 There is no doubt that some imitators in China like WPS will quickly follow up.
 It's safe to say AI gonna be a default mechnism in all kinds of software for office.
 
-2. Content Creator
+2. Content Creator  
 ChatGPT has shown that AI can do much better and faster on summary or expand contents around some topics.
 Advertisment, work summary even grantuate eassay can be finished by ChatGPT without major flaws.
 NFTs are indispenable on blockchain and creation threshold has been significantly lowered with Midjourney.
 Considering ChatGPT is good at describing, while Midjourney is good at drawing, it's possible to combine these two to deliever a more user-friendly product.
 
-3. AI Lawyer
+3. AI Lawyer  
 An US enterprise called DoNotPay has been using AI to help ppl defend themselves in some minor caces like traffic violation.
 Recently, the CEO of it offered 1 M reward to anyone who can use AI lawyer on larger case in Supreme Court.
 Although this area might stand on the edge of law, but still make sense.
@@ -51,19 +51,19 @@ Think about it, lawyers took massively thick documents into court just to choose
 And it's impossible to remember all of them, but AI can fetch relevant data with some fine-tune process.
 If both plaintiff and defendant are armed with AI, the trial proceedings should be fairer.
 
-4. Boosted Search Engine
+4. Boosted Search Engine  
 To be honest, ChatGPT has been a partner for me when coding, including this project.
 In some specific areas, ChatGPT is extremely powerful compared with Google and Bing. Programming is one of them.
 Mirosoft planned to integrate ChatGPT into Bing in March and some source said Baidu would release its own chat bot in the same month.
 Not to mention Google, I sincerely think Google has been improving its own AI for search engine which is definitely not inferior to OpenAI.
 This area is massive and many vulnerabilities could cause bugs, but it's always good to try.
 
-5. Education Assistant (for students and teacher)
+5. Education Assistant (for students and teacher)  
 AI may be unwelcom to many education institution. The main concern is on cheating.
 The thing is initial purpose of education is passing knowledge instead of grading students.
 Thus, if AI can truly make education more effecient and fairer, then it's nonsense to reject this tech.
 
-What AI can actually help with education? These points are from ChatGPT:
+What AI can actually help with education? These points are from ChatGPT:  
 * Automated grading and feedback
 * Personalized learning and adaptive tutoring
 * Automated course planning and scheduling
