@@ -8,4 +8,4 @@
 * Contributing
 * License
 
-![ChatGPT-reply](https://vitalik.ca/images/gpt3/plonk.png)
+![ChatGPT-reply](https://vitalik.ca/images/gpt3/plonk.png 'ChatGPT reply')
