@@ -133,8 +133,8 @@ This bot simulates the process of auditing contracts, it finish these tasks by o
          ERC1155.sol  
     
 2. Run this line:
-> python3 -i ama.py  
-You should get 
+> python3 -i ama.py   
+  You should get 
 
 
 
