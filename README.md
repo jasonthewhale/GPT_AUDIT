@@ -4,7 +4,7 @@
 * [Background](#Background)
 * [Possible usage and shortage of current ChatGPT demo](#Possible-usage-and-shortage-of-current-ChatGPT-demo)
 * [Install](#Install)
-* [Usage](#Usage)
+* [Features](#Features)
 * [Examples](#Examples)
 * [Contributing](#Contributing)
 * [License](#License)
@@ -102,24 +102,29 @@ The right answer should be like [this](https://github.com/ethereum/research/blob
 ### Install
 
 1. Download slither analyzer to scan vulnerabilities in solidity files
-> $pip3 install slither-analyzer
+```
+$ pip3 install slither-analyzer
+```
 
 2. Download openai to get completion of prompt
-> $pip install openai
+```
+$ pip install openai
+```
 
 3. Get audition bot from github
-> $git clone 
-
+```
+$ git clone 
+```
 
 -----
-### Usage
+### Features
 
 This bot simulates the process of auditing contracts, it finish these tasks by order:
   1. Scan all vulnerabilities in all solidity files provided, and this relys on slither;
-  2. Create an embedded data for contract contents, and it will check similarity and use relevant data as prompt;
+  2. Create an embedded data for contract contents, and it will check similarity and use relevant data as prompt; (text-similarity-ada-001 model)
   3. Give a summary of how these contracts work with each other based on files and one centence description from user;
   4. Store all chat logs, and choose X most relevant logs as part of prompt;
-  5. Answer all kinds of details questions (any variable or function) based on ChatGPT's knowledge.
+  5. Answer all kinds of details questions (any variable or function) based on ChatGPT's knowledge. (text-davinci-003 model)
 
 
 ------
@@ -128,16 +133,50 @@ This bot simulates the process of auditing contracts, it finish these tasks by o
    
    Example:  
      solidity_file   
-         ERC20.sol   
-         ERC721.sol  
-         ERC1155.sol  
-    
-2. Run this line:
-> python3 -i ama.py   
-  You should get 
+     - ERC20.sol   
+     - ERC721.sol  
+     - ERC1155.sol  
+         
 
 
+                
+2. Run this line:  
 
+```
+$ python3 -i ama.py  
+```
+  - first, it will merge all contract contents into a single file, called "merge.txt" and expext some feedback appeared in terminal:   
+    ```
+    $ finished merge contract
+    $ contract embedding has created
+    ```
+  - second, it will run slither to scan all vulnerabilities, and print results in terminal:  
+    ```
+    $ Context._msgData() (solidity_folder/utils/Context.sol#21-23) is never used and should be removed
+    $ ERC20._burn(address,uint256) (solidity_folder/ERC20.sol#277-293) is never used and should be removed
+    $ ERC20._mint(address,uint256) (solidity_folder/ERC20.sol#251-264) is never used and should be removed
+    $ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+
+    $ Pragma version^0.8.0 (solidity_folder/ERC20.sol#4) allows old versions
+    $ Pragma version^0.8.0 (solidity_folder/IERC20.sol#4) allows old versions
+    $ Pragma version^0.8.0 (solidity_folder/extensions/IERC20Metadata.sol#4) allows old versions
+    $ Pragma version^0.8.0 (solidity_folder/utils/Context.sol#4) allows old versions
+    $ solc-0.8.13 is not recommended for deployment
+    $ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+    $ ./solidity_folder/ERC20.sol analyzed (4 contracts with 81 detectors), 8 result(s) found
+    ```
+  - third, it will get all the function names from "merge.txt" and ask user to give a brief description of this project.
+    the pre-prompt would look like:   
+    > Assume you are a solidity contract audit bot, called AVI. USER will give you all names of contracts in his project and a brief description of his         project. Please tell user your thoughts of how these functions work together.
+    >
+    > Contract names: PotionPair, PotionPairETH, PotionPairERC20, PotionPool, PotionFactory, PotionRouter  
+    > Description: my project's name is Potion Protocol, aiming to provide an AMM trding platform for NFTs  
+  - with these useful information, the audit chat bot is ready to answer all relevant questions without limitation to tokens.
+    ```
+    AVI: Based on the contract names and project description, my understanding is that PotionPair is a contract used to pair NFTs with their corresponding     ERC20 and ETH tokens, PotionPool is a contract used to manage a liquidity pool of NFT and token pairs, PotionFactory is a contract used to mint and       burn NFTs, and PotionRouter is a contract used to route token transfers to and from the liquidity pool. The contracts should work together to enable       the user to trade NFTs on the AMM platform.
+    USER: 
+    ```
+  - also, bot will automatically store all chat log which can be used to get previous conversation, making more accurate answer.
 Write something here:
 User submit all contracts that need to test:
 
