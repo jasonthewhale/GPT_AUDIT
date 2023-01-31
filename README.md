@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Background](#Background)
-* [Possible usage and shortage of current ChatGPT demo](#Possible usage and shortage of current ChatGPT demo)
+* [Possible usage and shortage of current ChatGPT demo](#Possible-usage-and-shortage-of-current-ChatGPT-demo)
 * [Install](#Install)
 * [Usage](#Usage)
 * [Examples](#Examples)
@@ -21,6 +21,7 @@ Obviously, I am not qualified to create an alogorism and train my own model to c
 Insteadly, I can build some interesting bot based on an universal one -- ChatGPT.
 
 ---
+
 ### Possible usage and shortage of current ChatGPT demo
 
 #### Usage
@@ -125,8 +126,15 @@ This bot simulates the process of auditing contracts, it finish these tasks by o
 ### Examples
 1. Put all the solidity files into "solidity_folder". Slither and ChatGPT will scan and audit these files.
    
-   Example: 
-     
+   Example:  
+     solidity_file   
+         ERC20.sol   
+         ERC721.sol  
+         ERC1155.sol  
+    
+2. Run this line:
+> python3 -i ama.py  
+You should get 
 
 
 
