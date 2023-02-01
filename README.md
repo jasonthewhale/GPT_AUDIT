@@ -130,14 +130,13 @@ This bot simulates the process of auditing contracts, it finish these tasks by o
 ------
 ### Examples
 1. Put all the solidity files into "solidity_folder". Slither and ChatGPT will scan and audit these files.
-   
    Example:  
-     solidity_file   
-     - ERC20.sol   
-     - ERC721.sol  
-     - ERC1155.sol  
-         
-
+ ```
+   solidity_file    
+      - ERC20.sol    
+      - ERC721.sol   
+      - ERC1155.sol  
+ ```         
 
                 
 2. Run this line:  
