@@ -6,8 +6,7 @@ import dotenv
 import openai
 import json
 import time
-import os
-import re
+
 
 dotenv.load_dotenv(".env")
 
@@ -16,6 +15,7 @@ openai.api_key = os.getenv("API_KEY")
 
 def slither_scan(contract_path):
     result = subprocess.run(['slither', contract_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print(f'\nresult of {contract_path} is: {result}\n')
     return result
 
 
@@ -37,13 +37,13 @@ def get_reports():
     report_list = []
     for sol_file in sol_files:
         report = slither_scan(sol_file)
-        report_list.append(report)
+        report_list.append(str(report))
     print('\n'.join(report_list))
 
 
 def get_contract_name(folder_path):
     name_list =[]
-    input_files = get_folder_files(folder_path)
+    input_files = get_sol_files(folder_path)
     for file in input_files:
         name = file[len(folder_path)+1 : -4]
         name_list.append(name)
@@ -51,7 +51,7 @@ def get_contract_name(folder_path):
 
 
 def merge_contract(folder_path, merge_file):
-    input_files = get_folder_files(folder_path)
+    input_files = get_sol_files(folder_path)
     with open(merge_file, 'a') as outfile:
         for file in input_files:
             content = open_file(file)
@@ -60,7 +60,7 @@ def merge_contract(folder_path, merge_file):
 
 
 def open_file(filename):
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         return file.read()
 
 
@@ -150,7 +150,17 @@ def ask_gpt(prompt):
     return reply
 
 
+def create_contrcat_memory():
+    merge_contract('solidity_folder', 'merge.txt')
+    print('finished merge contract')
+    save_embedding('merge.txt', 'index.json')
+    print('contract embedding has created')
+
+
 def main():
+    # use provided files to create contract embedding data
+    # since ada model has ratelimit, this step may take 5 mins
+    create_contrcat_memory()
     # use slither to create a static analyze report
     get_reports()
     conversation = []
