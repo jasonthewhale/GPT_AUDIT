@@ -113,7 +113,7 @@ $ pip install openai
 
 3. Get audition bot from github
 ```
-$ git clone 
+$ git clone https://github.com/jasonthewhale/GPT_AUDIT.git
 ```
 
 -----
