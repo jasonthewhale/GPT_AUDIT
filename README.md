@@ -50,7 +50,7 @@ If both plaintiff and defendant are armed with AI, the trial proceedings should 
 4. Boosted Search Engine  
 To be honest, ChatGPT has been a partner for me when coding, including this project.   
 In some specific areas, ChatGPT is extremely powerful compared with Google and Bing.   
-Programming is one of them. Mirosoft planned to integrate ChatGPT into Bing in March and some source said Baidu would release its own chat bot in the same month.   
+Programming is one of them. Microsoft planned to integrate ChatGPT into Bing in March and some source said Baidu would release its own chat bot in the same month.   
 Not to mention Google, I sincerely think Google has been improving its own AI for search engine, which is definitely not inferior to OpenAI.   
 This area is massive and many vulnerabilities could cause bugs, but it's always good to try.  
 
@@ -84,9 +84,9 @@ Currently, the shortage of ChatGPT is pretty clear as well.
 
 3. Mulitple retries are needed.
    As far as I know, ChatGPT needs retry to get answer for two reasons.
-    - High request demands
+    - High request demands   
       Users around the world give prompt, waiting for reply. ChatGPT is overworked in some specific situation.
-    - Inaccurate answer
+    - Inaccurate answer     
       Sometimes, it takes multiple retries to get the ideal answer, even if the prompt is the same.
 
 -----
